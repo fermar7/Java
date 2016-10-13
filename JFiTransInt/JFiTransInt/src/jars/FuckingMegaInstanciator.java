@@ -20,9 +20,8 @@ public class FuckingMegaInstanciator<E> {
     		for (String[] field : list) {
     			Field fuckingField = fuckingInstance.getClass().getField(field[0]);
         		
-    			
-        		fuckingField.set(fuckingInstance, 5);
-    		
+        		fuckingField.set(fuckingInstance, fuckingField.getType().cast("Jo") );
+    		}
     		return fuckingInstance;
     		
     	} catch (Exception fuckingException) {

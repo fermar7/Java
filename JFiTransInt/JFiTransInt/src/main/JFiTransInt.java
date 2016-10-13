@@ -17,7 +17,7 @@ public class JFiTransInt {
 		
 		Test t = test.fuckingMagic(cl1);
 		
-		System.out.println(t.aNumber);
+		System.out.println(t.aString);
 	}
 	
 	public static <T> void printArray(T[] array){
