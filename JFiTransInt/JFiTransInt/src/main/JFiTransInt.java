@@ -1,8 +1,13 @@
 package main;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Arrays;
 
-import jars.FuckingMegaInstanciator;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import jars.JarsPanel;
 import jars.Test;
 
 public class JFiTransInt {
@@ -13,11 +18,37 @@ public class JFiTransInt {
 		
 		//printArray(cl1.getFields()[0].getAnnotations());
 		
-		FuckingMegaInstanciator<Test> test = new FuckingMegaInstanciator<Test>();
 		
-		Test t = test.fuckingMagic(cl1);
+		JarsPanel<Test> test = new JarsPanel<Test>(cl1);
 		
-		System.out.println(t.aString);
+		JFrame frame = new JFrame("Cool");
+		
+		frame.setLayout(null);
+		frame.setSize(500, 500);
+		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		frame.setVisible(true);
+		
+		frame.add(test);
+		
+		JButton button = new JButton();
+		button.setBounds(200, 200, 100, 50);
+		
+		ActionListener action = new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				Test t = test.getInstance();
+				
+				System.out.println(t);
+				
+			}
+		};
+		
+		button.addActionListener(action);
+		
+		frame.add(button);
+		
 	}
 	
 	public static <T> void printArray(T[] array){
