@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.LookAndFeel;
 
 import jars.JarsPanel;
 import jars.Test;
@@ -13,6 +14,9 @@ import jars.Test;
 public class JFiTransInt {
 	
 	public static void main(String[] args){
+		
+		
+		
 		
 		Class<Test> cl1 = Test.class;
 		

@@ -12,6 +12,9 @@ public class Test {
 	@JarsField(fieldName = "Another String")
 	public String secondString;
 	
+	@JarsField(fieldName = "Joho String")
+	public String thirdString;
+	
 	@Override
 	public String toString() {
 		String fields = "";
