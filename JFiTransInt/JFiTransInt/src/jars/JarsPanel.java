@@ -29,7 +29,7 @@ public class JarsPanel<E> extends JPanel{
 	public E getInstance() {
     	
     	try {
-    		E instace = this.theClass.newInstance();
+    		E instance = this.theClass.newInstance();
     		
     		List<Tuple<String, String>> list = getFields();
     		
